@@ -127,58 +127,58 @@ wait(0.6)
 blur:Destroy()
 gui:Destroy()
 
--------------------------  
--- IMPORTANT PANEL UI --  
--------------------------  
-local importantGui = Instance.new("ScreenGui", playerGui)  
-importantGui.Name = "ImportantPanel"  
+-------------------------  
+-- IMPORTANT PANEL UI --  
+-------------------------  
+local importantGui = Instance.new("ScreenGui", playerGui)  
+importantGui.Name = "ImportantPanel"  
 
-local panel = Instance.new("Frame", importantGui)  
-panel.Size = UDim2.new(0, 400, 0, 260)  
-panel.Position = UDim2.new(0.5, -200, 0.5, -130)  
-panel.BackgroundColor3 = Color3.fromRGB(25,25,25)  
-panel.BorderSizePixel = 0  
-Instance.new("UICorner", panel).CornerRadius = UDim.new(0, 12)  
+local panel = Instance.new("Frame", importantGui)  
+panel.Size = UDim2.new(0, 400, 0, 260)  
+panel.Position = UDim2.new(0.5, -200, 0.5, -130)  
+panel.BackgroundColor3 = Color3.fromRGB(25,25,25)  
+panel.BorderSizePixel = 0  
+Instance.new("UICorner", panel).CornerRadius = UDim.new(0, 12)  
 
-local title = Instance.new("TextLabel", panel)  
-title.Size = UDim2.new(1, 0, 0, 40)  
-title.BackgroundTransparency = 1  
-title.Text = "⚠️ IMPORTANT ⚠️"  
-title.Font = Enum.Font.GothamBold  
-title.TextSize = 20  
-title.TextColor3 = Color3.fromRGB(255, 200, 0)  
+local title = Instance.new("TextLabel", panel)  
+title.Size = UDim2.new(1, 0, 0, 40)  
+title.BackgroundTransparency = 1  
+title.Text = "⚠️ IMPORTANT ⚠️"  
+title.Font = Enum.Font.GothamBold  
+title.TextSize = 20  
+title.TextColor3 = Color3.fromRGB(255, 200, 0)  
 
-local instructions = Instance.new("TextLabel", panel)  
-instructions.Size = UDim2.new(1, -20, 1, -80)  
-instructions.Position = UDim2.new(0, 10, 0, 50)  
-instructions.BackgroundTransparency = 1  
-instructions.Text = "1. Wait to the script load successful\n2. Do not execute the Script in private server\n3. if you use delta,krnl right now the script doesn't work delta&krnl will kick you in the server\n4. If its doesn't work go server hop and Reexecute\n5. You all done"  
-instructions.Font = Enum.Font.Gotham  
-instructions.TextSize = 16  
-instructions.TextColor3 = Color3.fromRGB(255,255,255)  
-instructions.TextWrapped = true  
-instructions.TextXAlignment = Enum.TextXAlignment.Left  
-instructions.TextYAlignment = Enum.TextYAlignment.Top  
+local instructions = Instance.new("TextLabel", panel)  
+instructions.Size = UDim2.new(1, -20, 1, -80)  
+instructions.Position = UDim2.new(0, 10, 0, 50)  
+instructions.BackgroundTransparency = 1  
+instructions.Text = "1. Wait to the script load successful\n2. Do not execute the Script in private server\n3. Script is always Updated\n4. If its doesn't work go server hop and Reexecute\n5. Follow the instructions\n6. And You all done"  
+instructions.Font = Enum.Font.Gotham  
+instructions.TextSize = 16  
+instructions.TextColor3 = Color3.fromRGB(255,255,255)  
+instructions.TextWrapped = true  
+instructions.TextXAlignment = Enum.TextXAlignment.Left  
+instructions.TextYAlignment = Enum.TextYAlignment.Top  
 
-local button = Instance.new("TextButton", panel)  
-button.Size = UDim2.new(0, 200, 0, 40)  
-button.Position = UDim2.new(0.5, -100, 1, -50)  
-button.BackgroundColor3 = Color3.fromRGB(0, 170, 255)  
-button.Text = "Got it"  
-button.Font = Enum.Font.GothamBold  
-button.TextSize = 18  
-button.TextColor3 = Color3.fromRGB(255,255,255)  
-Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)  
+local button = Instance.new("TextButton", panel)  
+button.Size = UDim2.new(0, 200, 0, 40)  
+button.Position = UDim2.new(0.5, -100, 1, -50)  
+button.BackgroundColor3 = Color3.fromRGB(0, 170, 255)  
+button.Text = "Got it"  
+button.Font = Enum.Font.GothamBold  
+button.TextSize = 18  
+button.TextColor3 = Color3.fromRGB(255,255,255)  
+Instance.new("UICorner", button).CornerRadius = UDim.new(0, 8)  
 
--- Kapag pinindot yung "Got it", mawawala ang IMPORTANT panel at lalabas yung Script Loader  
-button.MouseButton1Click:Connect(function()  
-	importantGui:Destroy()  
+-- Kapag pinindot yung "Got it", mawawala ang IMPORTANT panel at lalabas yung Script Loader  
+button.MouseButton1Click:Connect(function()  
+	importantGui:Destroy()  
 
-	----------------------  
-	-- SCRIPT LOADER CODE  
-	----------------------  
-    -- (Paste here yung buong loader script mo na ginawa mo dati, walang bawas)  
-    loadstring(game:HttpGet(" SCRIPT_TYPE_HERE "))()  
+	----------------------  
+	-- SCRIPT LOADER CODE  
+	----------------------  
+    -- (Paste here yung buong loader script mo na ginawa mo dati, walang bawas)  
+    loadstring(game:HttpGet(" SCRIPT_TYPE_HERE "))()  
 end)
 
 end)
